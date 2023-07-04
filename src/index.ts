@@ -72,7 +72,7 @@ export function deleteSaving(id: string): Result<Saving, string> {
     Some: (saving) => Result.Ok<Saving, string>(saving),
     None: () =>
       Result.Err<Saving, string>(
-        `couldn't delete saving with id=${id}. Profile not found.`
+        `couldn't delete saving with id=${id}.`
       ),
   });
 }
